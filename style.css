@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    transition: 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 500px;
+    height: 600px;
+    background: #ff3333;
+}
+
+.container .card:hover{
+    padding-top: 22px;
+    width: 550px;
+    height: 800px;
+    box-shadow: 0 0 5px #ff3333,
+    0 0 20px #ff3333;
+}
+
+
+.container .card .image1 {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+
+}
+.container .card .image1 img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .image2 {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    opacity: 0%;
+    transition: 0.5s;
+}
+.container .card .image2 img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .card:hover .image2{
+    opacity: 100%;
+}
+
+.container .card .content {
+    opacity: 0;
+    transition: 0.8s;
+    transition-delay: 0.3s;
+    position: absolute;
+    overflow: hidden;
+}
+
+.container .card .content img {
+    position: absolute;
+    top: 610px;
+    left: -250px;
+    width: 500px;
+}
+.container .card:hover .content{
+    opacity:100;
+    overflow: visible;
+
+}
